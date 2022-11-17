@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.gms.ads.admanager.AdManagerAdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adManagerAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="/6499/example/banner"></com.google.android.gms.ads.admanager.AdManagerAdView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/showInterstitialAd"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adManagerAdView"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        android:text="Show Interstitial" />
+
+    <com.google.android.ads.nativetemplates.TemplateView
+        android:id="@+id/my_template"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:gnt_template_type="@layout/gnt_small_template_view" />
+
+
+</RelativeLayout>
